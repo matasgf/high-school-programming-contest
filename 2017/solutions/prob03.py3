@@ -1,0 +1,20 @@
+import sys
+
+def toFahrenheit(celsius):
+    return round(celsius * 9/5 + 32)
+
+def toMPH(kph):
+    return round(kph / 1.609344)
+
+lines = sys.stdin.readlines()
+num_cases = int(lines[0])
+ 
+case = 1
+while case < num_cases + 1:
+    tempHighC, tempLowC, windKPH = lines[case].split()
+    tempHighF = toFahrenheit(int(tempHighC))
+    tempLowF = toFahrenheit(int(tempLowC))
+    windMPH = toMPH(int(windKPH))
+    print("%dF %dF %dMPH" % (tempHighF, tempLowF, windMPH))
+    case = case + 1
+

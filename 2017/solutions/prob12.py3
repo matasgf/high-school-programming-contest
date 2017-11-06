@@ -1,0 +1,26 @@
+import sys
+
+# This is a brute force approach. Try every possible combination.
+def isPolite(num):
+    for start in range(1, num):
+        sum = 0
+        for cur in range(start, num):
+            sum = sum + cur
+            # If the sum is equal to the original number, number is polite
+            if sum == num:
+                return 1
+            # If the sum is greater than num, increment start and try again.
+            if sum > num:
+                break
+    return 0
+
+for line in sys.stdin.readlines():
+    num = int(line)
+    if num == 0:
+        break;
+
+    if isPolite(num):
+        print("%s is polite" % num)
+    else:
+        print("%s is not polite" % num)
+
