@@ -1,13 +1,7 @@
 import sys
 
-lines = sys.stdin.readlines()
-num_cases = int(lines[0])
-
-case = 1
-while case < num_cases + 1:
-    line = lines[case].split()
-    noun = line[0]
-    verb = line[1]
+for line in sys.stdin:
+    words = line.split()
+    noun = words[0]
+    verb = words[1]
     print("%s is %s today!" % (noun, verb))
-    case = case + 1
-
