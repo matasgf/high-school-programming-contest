@@ -5,14 +5,11 @@ public class prac02 {
         BufferedReader reader
             = new BufferedReader(new InputStreamReader(System.in));
  
-        int numCases = Integer.parseInt(reader.readLine());
-
-
-        while (numCases > 0) {
-            --numCases;
-            String line[] = reader.readLine().trim().split("\\s+");
-            String noun = line[0];
-            String verb = line[1];
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            String words[] = line.trim().split("\\s+");
+            String noun = words[0];
+            String verb = words[1];
             System.out.println(noun + " is " + verb + " today!");
         }
     }
