@@ -1,0 +1,16 @@
+import sys
+
+for line in sys.stdin:
+    line = line.rstrip()
+    total = 0
+
+    for i in range(0, 9):
+        digit = int(line[i])
+        total += (i + 1) * digit
+
+    check = total % 11
+
+    if check == 10:
+        print line + "X"
+    else:
+        print line + str(check)
