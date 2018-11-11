@@ -1,0 +1,8 @@
+import sys
+
+for line in sys.stdin:
+    f1, f2, f3, f4, f5 = line.split()
+    total_mb = float(f1) + float(f2) + float(f3) + float(f4) + float(f5)
+    total_gb = total_mb / 1024
+    total_gb = round(total_gb * 2, 0) / 2
+    print total_gb

@@ -10,7 +10,7 @@ Each contest is organized into a separate folder by year. Team Packets and other
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -26,7 +26,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Thank you to Sherry Coker and everyone else involved in MATA for organizing/hosting/supporting the MATA HSPC event.
-* Thank you to Robin Robertson with Republic Schools for promoting this event toHigh School Computer Science teachers and students in our region.
+* Thank you to Robin Robertson with Republic Schools for promoting this event to High School Computer Science teachers and students in our region.
 * Thank you to Thomas Rankin and Frederick Lawler for volunteering time to help proofread Problem Statements and write test solutions.
 * Numerous problems were adapted from (or inspired by) problems on [HP CodeWars](http://www.hpcodewars.org/).
 * Thank you to the [DOMjudge](https://www.domjudge.org/) team for creating an excellent Programming Contest platform. Their system was easy to configure on several AWS EC2 instances and performed flawlessly.

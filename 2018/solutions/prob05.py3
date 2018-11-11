@@ -1,0 +1,17 @@
+import sys
+
+for line in sys.stdin:
+    line = line.rstrip()
+    fold = ""
+    first = True
+
+    while line:
+        if first:
+            fold += line[0]
+            line = line[1:]
+        else:
+            fold += line[-1]
+            line = line[:-1]
+        first = not first
+
+    print(fold)
