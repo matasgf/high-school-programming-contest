@@ -3,11 +3,11 @@
 #include <iomanip>
 #include <cmath>
 
-#define NUM_FILES 6
+#define NUM_FILES 5
 
 int main() {
   double mb, conversion;
-  int counter = 1;
+  int counter = 0;
   double mbSum = 0;
 
   std::cout << std::fixed << std::setprecision(1);
@@ -19,7 +19,7 @@ int main() {
       conversion = round((mbSum / 1024) * 2) / 2;
       std::cout << conversion << std::endl;
       mbSum = 0;
-      counter = 1;
+      counter = 0;
     }
   }
 
