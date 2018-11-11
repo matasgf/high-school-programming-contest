@@ -1,10 +1,10 @@
 import java.io.*;
- 
+
 public class prac02 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader
-            = new BufferedReader(new InputStreamReader(System.in));
- 
+                = new BufferedReader(new InputStreamReader(System.in));
+
         String line = null;
         while ((line = reader.readLine()) != null) {
             String words[] = line.trim().split("\\s+");
@@ -14,4 +14,3 @@ public class prac02 {
         }
     }
 }
-
