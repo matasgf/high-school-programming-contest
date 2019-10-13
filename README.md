@@ -67,7 +67,7 @@ Run program with sample input
 
 ```
 cd 2019/solutions/
-node prac02.js < ../problems/prac02.in
+node prac02.js < ../problems/prac02.in1
 Mitchell is coding today!
 Danese is testing today!
 Larry is debugging today!
