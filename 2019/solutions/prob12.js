@@ -5,23 +5,43 @@ const readInterface = readline.createInterface({
     console: false
 });
 
-let magazine = null;
-let message = null;
-let lineNumber = 1;
-
+let line_number = 1;
+let mag_letters = [];
+let msg_letters = [];
 readInterface.on('line', function(line) {
-    // Read exactly two lines of input: magazine and message
-    // Ignore all other lines
-    if (lineNumber == 1) {
-        // Read first line
-        magazine = line;
-    }
-    else if (lineNumber == 2) {
-        // Read second line, perform calculations
-        message = line;
-        console.log('Magazine: ' + magazine);
-        console.log('Message: ' + message);
+    line = line.trim().replace(/ /g,'');
+
+    if(line_number == 1) {
+        for(var x = 0; x < line.length; x++) {
+            mag_letters.push(line[x]);
+        }
+    } else if (line_number == 2) {
+        let incomplete = 0;
+
+        //# Save each message character to a list. Ignore spaces.
+        for(var x = 0; x < line.length; x++) {
+            let msg_letter = line[x];
+            if(mag_letters.filter(value => value == msg_letter).length) {
+                msg_letters.push(msg_letter);
+
+                const index = mag_letters.indexOf(msg_letter);
+                mag_letters.splice(index, 1);
+            } else {
+                incomplete = 1;
+                break;
+            }
+        }
+
+        if(incomplete == 0) {
+            console.log('true')
+        }
+        else {
+            console.log('false')
+        }
+
     }
 
-    lineNumber++;
+
+    line_number++;
+
 });
