@@ -4,11 +4,20 @@
 if [ ! -f $1.cpp ]; then
     echo "File Not Found [$1.cpp]"
 else
-    c++ $1.cpp -o $1.bin
     echo "===== Program Output ====="
-    ./$1.bin < ../problems/$1.in$2
+    c++ $1.cpp -o $1.bin
+    INPUT=`./$1.bin < ../problems/$1.in$2`
     rm ./$1.bin
+    echo $INPUT
     echo "===== Expected Output ===="
-    cat ../problems/$1.out$2
+    OUTPUT=`cat ../problems/$1.out$2`
+    echo $OUTPUT
+    echo "===== STATUS ===="
+    if [ "$OUTPUT" == "$INPUT" ]
+    then
+      echo "SUCCESS"
+    else
+      echo "FAILURE"
+    fi
 fi
 

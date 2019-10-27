@@ -4,11 +4,20 @@
 if [ ! -f $1.c ]; then
     echo "File Not Found [$1.c]"
 else
-    cc $1.c -o $1.binc
     echo "===== Program Output ====="
-    ./$1.binc < ../problems/$1.in$2
+    cc $1.c -o $1.binc
+    INPUT=`./$1.binc < ../problems/$1.in$2`
     rm ./$1.binc
+    echo $INPUT
     echo "===== Expected Output ===="
-    cat ../problems/$1.out$2
+    OUTPUT=`cat ../problems/$1.out$2`
+    echo $OUTPUT
+    echo "===== STATUS ===="
+    if [ "$OUTPUT" == "$INPUT" ]
+    then
+      echo "SUCCESS"
+    else
+      echo "FAILURE"
+    fi
 fi
 
