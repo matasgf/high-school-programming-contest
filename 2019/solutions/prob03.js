@@ -12,5 +12,5 @@ readInterface.on('line', function(line) {
         return val * 1;
     });
     unique.sort((a, b) => {return a-b});
-    console.log(unique.join(' '));
+    console.log(unique.join(', '));
 });

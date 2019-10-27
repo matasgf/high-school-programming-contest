@@ -17,5 +17,5 @@ for line in sys.stdin:
     # Sort the keys ascending
     list_sorted = sorted(list_unique)
     # Output sorted list
-    print(' '.join(map(str, list_sorted)))
+    print(', '.join(map(str, list_sorted)))
     # Repeat for each input line
