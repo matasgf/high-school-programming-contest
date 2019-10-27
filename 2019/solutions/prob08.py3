@@ -13,20 +13,23 @@ for line in sys.stdin:
     # Split line into words
     words = line.split()
 
-    # Allow access UNLESS word found does NOT begin or end with "s"
-    welcome = 1
-
-    # Check each word
-    for x in range(0, len(words)):
-        word = words[x]
-        if word[0] != 's' and word[-1] != 's' and word[0] != 'S' and word[-1] != 'S':
-            # Current word does not begin or end with "s". Deny access
-            welcome = 0
-            break
-
-    if welcome == 1:
-        print('welcome')
-    else:
+    if len(words) != 3:
         print('denied')
+    else:
+        # Allow access UNLESS word found does NOT begin or end with "s"
+        welcome = 1
+
+        # Check each word
+        for x in range(0, len(words)):
+            word = words[x]
+            if word[0] != 's' and word[-1] != 's' and word[0] != 'S' and word[-1] != 'S':
+                # Current word does not begin or end with "s". Deny access
+                welcome = 0
+                break
+
+        if welcome == 1:
+            print('welcome')
+        else:
+            print('denied')
 
     # Repeat for each input line
