@@ -27,6 +27,9 @@ for line in sys.stdin:
             position = x
 
     # Output two closest integers from list
-    print(list_sorted[position], list_sorted[position+1])
+    if len(list_sorted) > 1:
+        print(list_sorted[position], list_sorted[position+1])
+    else:
+        print(list_sorted[position])
 
     # Repeat for each input line

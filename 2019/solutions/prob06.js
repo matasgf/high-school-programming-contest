@@ -29,7 +29,12 @@ readInterface.on('line', function(line) {
     }
 
     //# Output two closest integers from list
-    console.log(list_sorted[position], list_sorted[position+1]);
+    if(list_sorted.length > 1){
+        console.log(list_sorted[position], list_sorted[position+1]);
+    }
+    else {
+        console.log(list_sorted[position]);
+    }
 
     //# Repeat for each input line
 
