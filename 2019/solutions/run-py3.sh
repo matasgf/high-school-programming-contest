@@ -6,10 +6,10 @@ if [ ! -f $1.py3 ]; then
 else
     echo "===== Program Output ====="
     INPUT=`python3 $1.py3 < ../problems/$1.in$2`
-    echo $INPUT
+    echo "$INPUT"
     echo "===== Expected Output ===="
     OUTPUT=`cat ../problems/$1.out$2`
-    echo $OUTPUT
+    echo "$OUTPUT"
     echo "===== STATUS ===="
     if [ "$OUTPUT" == "$INPUT" ]
     then
