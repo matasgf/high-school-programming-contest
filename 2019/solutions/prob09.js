@@ -30,7 +30,9 @@ readInterface.on('line', function(line) {
         let encoded = line.split(' ');
         for(var x = 0; x < encoded.length; x++) {
             let encoded_word = encoded[x];
-            decoded_words.push(decode[encoded_word]);
+            if(encoded_word in decode){
+                decoded_words.push(decode[encoded_word]);
+            }
         }
 
         console.log(decoded_words.join(' '));
