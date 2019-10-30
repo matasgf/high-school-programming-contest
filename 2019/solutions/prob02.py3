@@ -13,6 +13,12 @@ for line in sys.stdin:
     # Sort the keys descending
     list_sorted = sorted(list_unique, reverse=True)
     # Output first 3 keys from list
-    first, second, third = list_sorted[0:3]
-    print(first, second, third)
+    position = 0
+    output = []
+    for value in list_sorted:
+        output.append(str(value))
+        position = position + 1
+        if position >= 3:
+            break
+    print(' '.join(output))
     # Repeat for each input line
