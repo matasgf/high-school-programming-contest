@@ -14,8 +14,8 @@ for line in sys.stdin:
     water_weight = 62.4
 
     # Force types
-    volume = int(volume)
-    weight = int(weight)
+    volume = float(volume)
+    weight = float(weight)
     buoyancy = float(buoyancy)
 
     # Calculate Supported Weight
