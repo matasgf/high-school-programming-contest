@@ -35,7 +35,8 @@ for line in sys.stdin:
         decoded_words = []
         for x in range(0, len(encoded)):
             encoded_word = encoded[x]
-            decoded_words.append(decode[encoded_word])
+            if encoded_word in decode.keys():
+                decoded_words.append(decode[encoded_word])
         print(' '.join(decoded_words))
 
     line_number = line_number + 1
