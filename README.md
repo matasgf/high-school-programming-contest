@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MATA High School Programming Contest
 
 Mid-America Technology Alliance (MATA) (matasgf.com) and Hack 4 Good (H4G) (hack4goodsgf.com) began hosting an annual High School Programming Contest (HSPC) in Springfield Missouri in 2017.
