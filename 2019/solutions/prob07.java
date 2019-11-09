@@ -1,8 +1,6 @@
-package hack4Good7;
-
 import java.util.Scanner;
 
-public class TestDecodeVanityPhoneNumbers {
+public class prob07 {
 	public static String decodePhoneNumbers(char c) {
 		if(Character.isLetter(c))
 			c = Character.toUpperCase(c);
@@ -17,7 +15,7 @@ public class TestDecodeVanityPhoneNumbers {
 				return "3";
 			case '4': case 'G': case 'H': case 'I':
 				return "4";
-			case '5': case 'J': case 'k': case 'L':
+			case '5': case 'J': case 'K': case 'L':
 				return "5";
 			case '6': case 'M': case 'N': case 'O':
 				return "6";

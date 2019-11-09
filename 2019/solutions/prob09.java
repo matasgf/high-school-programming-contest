@@ -1,9 +1,7 @@
-package hack4Good9;
-
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class TestCodeWords {
+public class prob09 {
 
 	public static void main(String[] args) {
 		HashMap <String, String> hashMap = new HashMap<String, String>();
@@ -20,8 +18,8 @@ public class TestCodeWords {
 		if(encMessage.length() != 0)
 			spStr2 = encMessage.split(" ");
 		for(int i = 0; i < spStr2.length; i++) {
-			System.out.print(hashMap.get(spStr2[i]) + " ");
-			
+            if(hashMap.get(spStr2[i]) != null)
+			    System.out.print(hashMap.get(spStr2[i]) + " ");
 		}
 		input.close();
 	}

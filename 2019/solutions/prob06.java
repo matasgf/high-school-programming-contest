@@ -1,10 +1,8 @@
-package hack4Good6;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class TestClosestIntegers {
+public class prob06 {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> numList = new ArrayList<Integer>();
@@ -13,11 +11,6 @@ public class TestClosestIntegers {
 		String[] spStr = {};
 		if(str.length() != 0)
 			spStr = str.split(" ");
-		if(spStr.length < 3) {
-			System.out.println("The number (N) of integers must be greater equal to 2. Integer values between -100 and 100. "
-					+ "\nPlease run the program again.");
-			System.exit(0);
-		}		
 		for(int i = 0; i < spStr.length; i++) {
 			int num = Integer.parseInt(spStr[i]);
 			if(numList.contains(num))
@@ -35,9 +28,11 @@ public class TestClosestIntegers {
 				next = i + 1;
 			}
 		}
-		System.out.print(numList.get(prev) + " " + numList.get(next));
+        if(numList.get(prev) == numList.get(next))
+		    System.out.print(numList.get(prev));
+        else
+		    System.out.print(numList.get(prev) + " " + numList.get(next));
 		input.close();
-
 	}
 
 }

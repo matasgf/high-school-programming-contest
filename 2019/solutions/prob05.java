@@ -1,8 +1,6 @@
-package hack4Good5;
-
 import java.util.Scanner;
 
-public class TestBalancedLetters {
+public class prob05 {
 
 	public static void main(String[] args) {
 		int lowerCase = 0;

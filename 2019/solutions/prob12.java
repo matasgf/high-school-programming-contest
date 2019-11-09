@@ -1,9 +1,7 @@
-package hack4Good12;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TestRansomNote {
+public class prob12 {
 
 	public static void main(String[] args) {
 		int[] upperCase = new int[26];
